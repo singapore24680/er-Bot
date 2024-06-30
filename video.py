@@ -83,7 +83,7 @@ async def upload_video(client, file_path, thumbnail_path, video_title, reply_msg
                 percentage=percentage,
                 done=current,
                 total_size=total,
-                status="Uploading",
+                status="⬆️",
                 eta=(total - current) / (current / elapsed_time_seconds) if current > 0 else 0,
                 speed=current / elapsed_time_seconds if current > 0 else 0,
                 elapsed=elapsed_time_seconds,
@@ -112,7 +112,7 @@ async def upload_video(client, file_path, thumbnail_path, video_title, reply_msg
         )
         await asyncio.sleep(1)
         await message.delete()
-        await message.reply_sticker("CAACAgIAAxkBAAEZdwRmJhCNfFRnXwR_lVKU1L9F3qzbtAAC4gUAAj-VzApzZV-v3phk4DQE")
+        await message.reply_sticker("🫦")
 
     await reply_msg.delete()
 
