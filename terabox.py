@@ -87,7 +87,7 @@ async def handle_message(client, message: Message):
         await message.reply_text("ᴘʟᴇᴀsᴇ sᴇɴᴅ ᴀ ᴠᴀʟɪᴅ ᴛᴇʀᴀʙᴏx ʟɪɴᴋ.")
         return
 
-    reply_msg = await message.reply_text("VIDEO PROCESSING...........🤤")
+    reply_msg = await message.reply_text("📥")
 
     try:
         file_path, thumbnail_path, video_title = await download_video(terabox_link, reply_msg, user_mention, user_id)
