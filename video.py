@@ -59,7 +59,7 @@ async def download_video(url, reply_msg, user_mention, user_id):
         with open(thumbnail_path, "wb") as thumb_file:
             thumb_file.write(thumbnail_response.content)
 
-        await reply_msg.edit_text("ᴜᴘʟᴏᴀᴅɪɴɢ...")
+        await reply_msg.edit_text("📥")
 
         return file_path, thumbnail_path, video_title
     else:
@@ -83,7 +83,7 @@ async def upload_video(client, file_path, thumbnail_path, video_title, reply_msg
                 percentage=percentage,
                 done=current,
                 total_size=total,
-                status="⬆️",
+                status="⬆",
                 eta=(total - current) / (current / elapsed_time_seconds) if current > 0 else 0,
                 speed=current / elapsed_time_seconds if current > 0 else 0,
                 elapsed=elapsed_time_seconds,
