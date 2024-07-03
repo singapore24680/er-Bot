@@ -9,8 +9,8 @@ import logging
 
 aria2 = aria2p.API(
     aria2p.Client(
-        host="https://tera-seeutech-2ba3768e.koyeb.app/",
-        port=5000,
+        host="http://localhost",
+        port=6800,
         secret=""
     )
 )
